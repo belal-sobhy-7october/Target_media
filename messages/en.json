@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Target Media — Digital Marketing & Design Agency",
+    "description": "Professional digital marketing and design services that help your business grow with a powerful, premium presence."
+  },
+  "company": {
+    "name": "Target Media",
+    "phone": "01055113107",
+    "email": "belalsobhy7oc@gmail.com"
+  },
+  "nav": {
+    "services": "Services",
+    "focus": "Our Focus",
+    "contact": "Contact",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "Digital Marketing & Design Agency",
+    "headline": "Grow your brand online",
+    "intro": "Hello! This is Target Media. We specialize in providing professional digital marketing and design services that help your business grow and establish a powerful, premium presence before your clients."
+  },
+  "services": {
+    "label": "Our Services",
+    "title": "What we",
+    "titleMuted": "deliver.",
+    "subtitle": "End-to-end digital solutions tailored to elevate your brand and drive measurable results.",
+    "items": [
+      "Professional Graphic Design for Social Media & Ads",
+      "Modern and Fast Website Design & Development",
+      "Comprehensive Social Media Management",
+      "Paid Advertising Campaigns & Performance Analytics",
+      "Visual Identity & Logo Design",
+      "Professional Video Editing & Post-Production"
+    ]
+  },
+  "focus": {
+    "label": "Our Focus",
+    "title": "Built for",
+    "titleMuted": "growth.",
+    "statement": "Our goal isn't just to design, but to help you build a resilient, strong brand with a professional appearance that captures customers and drives scaling sales.",
+    "pillars": [
+      "High Quality",
+      "Fast Execution",
+      "Continuous Follow-up",
+      "Tailored Marketing Ideas",
+      "Continuous Optimization for Pages & Ads"
+    ]
+  },
+  "contact": {
+    "label": "Contact Us",
+    "title": "Let's grow",
+    "titleMuted": "together.",
+    "description": "We can kickstart your growth with a tailored strategy optimized for your business scope and budget, and showcase our previous successful portfolios. We'd love to learn more about your business to map out the best online execution plan.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "01XXXXXXXXX",
+      "business": "About your business",
+      "businessPlaceholder": "Tell us about your business and goals...",
+      "submit": "Send inquiry",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneRequired": "Please enter your phone number",
+      "phoneInvalid": "Please enter a valid Egyptian phone number",
+      "businessRequired": "Please tell us about your business"
+    },
+    "toast": {
+      "successTitle": "Message sent!",
+      "successDescription": "We'll get back to you shortly.",
+      "errorTitle": "Something went wrong",
+      "errorDescription": "Please try again later."
+    }
+  },
+  "footer": {
+    "tagline": "Professional digital marketing and design that helps your business stand out and scale.",
+    "rights": "All rights reserved.",
+    "sections": {
+      "services": "Services",
+      "company": "Company"
+    },
+    "links": {
+      "services": "Our Services",
+      "focus": "Our Focus",
+      "contact": "Contact"
+    }
+  },
+  "language": {
+    "en": "English",
+    "ar": "العربية"
+  }
+}
