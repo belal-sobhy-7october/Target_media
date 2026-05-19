@@ -35,16 +35,20 @@ export function FocusSection() {
             </span>
             <h2
               className={`text-5xl md:text-6xl lg:text-7xl font-display tracking-tight leading-[0.95] mb-8 text-start transition-all duration-1000 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
             >
               {t.focus.title}
               <br />
-              <span className="text-muted-foreground">{t.focus.titleMuted}</span>
+              <span className="text-[#C1121F]">{t.focus.titleMuted}</span>
             </h2>
             <p
               className={`text-lg lg:text-xl text-muted-foreground leading-relaxed text-start transition-all duration-1000 delay-150 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
               }`}
             >
               {t.focus.statement}
@@ -56,11 +60,13 @@ export function FocusSection() {
               <li
                 key={pillar}
                 className={`flex items-start gap-4 border border-foreground/10 bg-background/50 px-5 py-4 transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
                 }`}
-                style={{ transitionDelay: `${index * 60}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#eca8d6]/20 text-[#eca8d6]">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C1121F]/20 text-[#C1121F]">
                   <Check className="h-4 w-4" />
                 </span>
                 <span className="text-base text-foreground/90 text-start leading-snug">

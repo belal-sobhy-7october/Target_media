@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "@/components/providers/i18n-provider";
@@ -8,11 +9,13 @@ import { LanguageSwitcher } from "@/components/landing/language-switcher";
 
 export function Navigation() {
   const t = useTranslations();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: t.nav.services, href: "#services" },
+    { name: t.nav.work, href: "#work" },
     { name: t.nav.focus, href: "#focus" },
     { name: t.nav.contact, href: "#contact" },
   ];
@@ -22,6 +25,11 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const getActiveLink = (href: string) => {
+    if (href === "#") return pathname === "/" || pathname === "/ar";
+    return pathname.includes(href.replace("#", ""));
+  };
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
@@ -39,7 +47,7 @@ export function Navigation() {
       <nav
         className={`mx-auto transition-all duration-500 ${
           isScrolled || isMobileMenuOpen
-            ? "bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-lg max-w-[1200px]"
+            ? "bg-background/80 backdrop-blur-md border-b border-white/10 max-w-[1200px]"
             : "bg-transparent max-w-[1400px]"
         }`}
       >
@@ -48,7 +56,7 @@ export function Navigation() {
             isScrolled ? "h-14" : "h-20"
           }`}
         >
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center gap-2 relative">
             <span
               className={`font-display tracking-tight transition-all duration-500 ${
                 isScrolled ? "text-xl text-foreground" : "text-2xl text-white"
@@ -56,6 +64,7 @@ export function Navigation() {
             >
               {t.company.name}
             </span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C1121F]" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">
@@ -67,7 +76,7 @@ export function Navigation() {
                   isScrolled
                     ? "text-foreground/70 hover:text-foreground"
                     : "text-white/70 hover:text-white"
-                }`}
+                } ${getActiveLink(link.href) ? "border-b-2 border-[#C1121F]" : ""}`}
               >
                 {link.name}
                 <span
@@ -84,11 +93,7 @@ export function Navigation() {
             <Button
               size="sm"
               asChild
-              className={`rounded-full transition-all duration-500 ${
-                isScrolled
-                  ? "bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs"
-                  : "bg-white hover:bg-white/90 text-black px-6"
-              }`}
+              className="bg-[#C1121F] hover:bg-[#E5161F] text-white px-5 py-2 rounded-md transition-all duration-200 hover:scale-[1.02]"
             >
               <a href="#contact">{t.nav.cta}</a>
             </Button>
@@ -100,7 +105,9 @@ export function Navigation() {
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 transition-colors duration-500 ${
-                isScrolled || isMobileMenuOpen ? "text-foreground" : "text-white"
+                isScrolled || isMobileMenuOpen
+                  ? "text-foreground"
+                  : "text-white"
               }`}
               aria-label="Toggle menu"
             >
@@ -150,7 +157,10 @@ export function Navigation() {
             }`}
             style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
-            <Button className="w-full bg-foreground text-background rounded-full h-14 text-base" asChild>
+            <Button
+              className="w-full bg-foreground text-background rounded-full h-14 text-base"
+              asChild
+            >
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                 {t.nav.cta}
               </a>

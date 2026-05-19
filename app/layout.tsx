@@ -1,15 +1,33 @@
 import React from "react";
 import type { Metadata } from "next";
 import {
+  Bebas_Neue,
+  DM_Sans,
+  Cairo,
   Instrument_Sans,
   Instrument_Serif,
   JetBrains_Mono,
-  Noto_Sans_Arabic,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  variable: "--font-arabic",
+});
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -27,11 +45,6 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-const notoSansArabic = Noto_Sans_Arabic({
-  subsets: ["arabic"],
-  variable: "--font-arabic",
-});
-
 export const metadata: Metadata = {
   title: "Target Media — Digital Marketing & Design Agency",
   description:
@@ -46,9 +59,13 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} font-sans antialiased`}
+        className={`${bebasNeue.variable} ${dmSans.variable} ${cairo.variable} ${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           {children}
           <Toaster position="top-center" richColors closeButton />
         </ThemeProvider>

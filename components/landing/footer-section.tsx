@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "@/components/providers/i18n-provider";
+import { Instagram, Linkedin, Music } from "lucide-react";
 
 export function FooterSection() {
   const t = useTranslations();
@@ -37,11 +38,40 @@ export function FooterSection() {
                 {t.footer.tagline}
               </p>
               <div className="flex flex-col gap-2 text-sm text-white/60">
-                <a href={`tel:${t.company.phone}`} className="hover:text-white transition-colors">
+                <a
+                  href={`tel:${t.company.phone}`}
+                  className="hover:text-white transition-colors"
+                >
                   {t.company.phone}
                 </a>
-                <a href={`mailto:${t.company.email}`} className="hover:text-white transition-colors">
+                <a
+                  href={`mailto:${t.company.email}`}
+                  className="hover:text-white transition-colors"
+                >
                   {t.company.email}
+                </a>
+              </div>
+              <div className="flex gap-4 mt-6">
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
+                  aria-label="TikTok"
+                >
+                  <Music className="w-5 h-5" />
                 </a>
               </div>
             </div>
