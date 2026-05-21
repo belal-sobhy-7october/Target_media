@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "@/components/providers/i18n-provider";
-import { Instagram, Linkedin, Music } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 
 export function FooterSection() {
   const t = useTranslations();
@@ -53,26 +53,24 @@ export function FooterSection() {
               </div>
               <div className="flex gap-4 mt-6">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/vion_agency12/?hl=ar"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61590204153009"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
-                  aria-label="LinkedIn"
+                  aria-label="Facebook"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Facebook className="w-5 h-5" />
                 </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors"
-                  aria-label="TikTok"
-                >
-                  <Music className="w-5 h-5" />
-                </a>
+
               </div>
             </div>
 

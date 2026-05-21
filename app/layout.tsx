@@ -46,7 +46,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Target Media — Digital Marketing & Design Agency",
+  title: "Vion Agency — Digital Marketing & Design Agency",
   description:
     "Professional digital marketing and design services that help your business grow with a powerful, premium presence.",
 };

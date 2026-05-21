@@ -11,7 +11,7 @@ export const localeConfig: Record<
   ar: { dir: "rtl", label: "العربية" },
 };
 
-export const LOCALE_STORAGE_KEY = "target-media-locale";
+export const LOCALE_STORAGE_KEY = "vion-agency-locale";
 
 export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);

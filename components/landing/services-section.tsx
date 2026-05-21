@@ -15,6 +15,10 @@ import {
   Film,
   Camera,
   Tv,
+  Bug,
+  Search,
+  Gauge,
+  ShieldCheck,
 } from "lucide-react";
 import { useTranslations } from "@/components/providers/i18n-provider";
 
@@ -307,6 +311,84 @@ export function ServicesSection() {
               </div>
               <h3 className="text-white font-semibold text-base mb-2">Motion Graphics</h3>
               <p className="text-white/40 text-sm leading-relaxed">Animated visuals and intros for your content.</p>
+            </a>
+          </div>
+        </div>
+
+        {/* ===== BLOCK 4 — Software Testing ===== */}
+        <div className="mb-24">
+          <div className="w-full h-[500px] bg-black/[0.96] rounded-2xl relative overflow-hidden border border-white/[0.08] mb-16">
+            <div className="flex h-full">
+              {/* Left — Text */}
+              <div className="flex-1 p-10 relative z-10 flex flex-col justify-center">
+                <span className="inline-block text-xs font-medium tracking-widest uppercase text-[#C1121F] mb-4">
+                  QUALITY ASSURANCE
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Software Testing & QA
+                </h2>
+                <p className="mt-4 text-white/50 max-w-md text-base leading-relaxed">
+                  From manual testing to automated pipelines — we catch every bug before your users do.
+                </p>
+                <a
+                  href="#contact"
+                  className="mt-8 inline-flex items-center gap-2 bg-[#C1121F] hover:bg-[#E5161F] text-white px-6 py-3 rounded-md text-sm font-medium transition-all duration-200 hover:scale-[1.02] w-fit"
+                >
+                  Get Started
+                  <span>→</span>
+                </a>
+              </div>
+              {/* Right — Image */}
+              <div className="flex-1 relative overflow-hidden rounded-lg h-full">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80" alt="Software Testing" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          {/* Sub-cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <a
+              href="#contact"
+              className="group relative overflow-hidden bg-[#1E1E1E] border border-white/[0.06] rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-t-2 hover:border-t-[#C1121F] hover:shadow-[0_0_24px_rgba(193,18,31,0.08)]"
+            >
+              <span className="absolute top-3 end-4 text-[72px] font-bold leading-none text-white/[0.03] select-none pointer-events-none">01</span>
+              <div className="w-10 h-10 rounded-lg bg-[#C1121F]/10 flex items-center justify-center mb-5">
+                <Bug className="w-5 h-5 text-[#C1121F]" />
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">Manual Testing</h3>
+              <p className="text-white/40 text-sm leading-relaxed">Detailed functional and UI testing by expert QA engineers.</p>
+            </a>
+            <a
+              href="#contact"
+              className="group relative overflow-hidden bg-[#1E1E1E] border border-white/[0.06] rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-t-2 hover:border-t-[#C1121F] hover:shadow-[0_0_24px_rgba(193,18,31,0.08)]"
+            >
+              <span className="absolute top-3 end-4 text-[72px] font-bold leading-none text-white/[0.03] select-none pointer-events-none">02</span>
+              <div className="w-10 h-10 rounded-lg bg-[#C1121F]/10 flex items-center justify-center mb-5">
+                <Search className="w-5 h-5 text-[#C1121F]" />
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">Automated Testing</h3>
+              <p className="text-white/40 text-sm leading-relaxed">Cypress, Playwright, and Jest pipelines for continuous testing.</p>
+            </a>
+            <a
+              href="#contact"
+              className="group relative overflow-hidden bg-[#1E1E1E] border border-white/[0.06] rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-t-2 hover:border-t-[#C1121F] hover:shadow-[0_0_24px_rgba(193,18,31,0.08)]"
+            >
+              <span className="absolute top-3 end-4 text-[72px] font-bold leading-none text-white/[0.03] select-none pointer-events-none">03</span>
+              <div className="w-10 h-10 rounded-lg bg-[#C1121F]/10 flex items-center justify-center mb-5">
+                <Gauge className="w-5 h-5 text-[#C1121F]" />
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">Performance Testing</h3>
+              <p className="text-white/40 text-sm leading-relaxed">Load testing and bottleneck detection before launch.</p>
+            </a>
+            <a
+              href="#contact"
+              className="group relative overflow-hidden bg-[#1E1E1E] border border-white/[0.06] rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-t-2 hover:border-t-[#C1121F] hover:shadow-[0_0_24px_rgba(193,18,31,0.08)]"
+            >
+              <span className="absolute top-3 end-4 text-[72px] font-bold leading-none text-white/[0.03] select-none pointer-events-none">04</span>
+              <div className="w-10 h-10 rounded-lg bg-[#C1121F]/10 flex items-center justify-center mb-5">
+                <ShieldCheck className="w-5 h-5 text-[#C1121F]" />
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">Security Testing</h3>
+              <p className="text-white/40 text-sm leading-relaxed">Vulnerability scanning and penetration testing for your app.</p>
             </a>
           </div>
         </div>

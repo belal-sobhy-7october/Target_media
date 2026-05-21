@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "@/components/providers/i18n-provider";
@@ -56,15 +57,17 @@ export function Navigation() {
             isScrolled ? "h-14" : "h-20"
           }`}
         >
-          <a href="#" className="flex items-center gap-2 relative">
-            <span
-              className={`font-display tracking-tight transition-all duration-500 ${
-                isScrolled ? "text-xl text-foreground" : "text-2xl text-white"
-              }`}
-            >
+          <a href="#" className="flex items-center gap-3 relative">
+            <Image
+              src="/vion-logo.png"
+              alt="Vion Agency"
+              width={130}
+              height={44}
+              className="object-contain"
+            />
+            <span className="hidden sm:inline text-xl font-black tracking-widest text-white uppercase">
               {t.company.name}
             </span>
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C1121F]" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">

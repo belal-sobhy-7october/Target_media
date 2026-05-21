@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Target Media — Digital Marketing & Design Agency",
+    "title": "Vion Agency — Digital Marketing & Design Agency",
     "description": "Professional digital marketing and design services that help your business grow with a powerful, premium presence."
   },
   "company": {
-    "name": "Target Media",
+    "name": "Vion Agency",
     "phone": "+201039708957",
-    "email": "belalsobhy7oc@gmail.com"
+    "email": "vionagency478@gmail.com"
   },
   "nav": {
     "services": "Services",
@@ -18,7 +18,7 @@
   "hero": {
     "eyebrow": "Creative Agency for Brands That Mean Business",
     "headline": "We Build Brands That Get Noticed",
-    "intro": "Target Media is a full-service creative agency helping ambitious brands grow through smart design, powerful content, and data-driven marketing."
+    "intro": "Vion Agency is a full-service creative agency helping ambitious brands grow through smart design, powerful content, and data-driven marketing."
   },
   "services": {
     "label": "Our Services",
@@ -128,7 +128,7 @@
       "name": "Full name",
       "namePlaceholder": "Your name",
       "email": "Email",
-      "emailPlaceholder": "you@company.com",
+      "emaiaceholder": "you@company.com",
       "phone": "Phone",
       "phonePlaceholder": "01XXXXXXXXX",
       "business": "About your business",

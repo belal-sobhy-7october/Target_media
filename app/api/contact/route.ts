@@ -6,11 +6,11 @@ import {
   type ContactPayload,
 } from "@/lib/validation/contact";
 
-const LEAD_NOTIFICATION_TO = "belalsobhy7oc@gmail.com";
+const LEAD_NOTIFICATION_TO = "vionagency478@gmail.com";
 
 function formatLeadEmailBody(payload: ContactPayload, leadId: string) {
   return [
-    "New contact form lead (Target Media)",
+    "New contact form lead (Vion Agency)",
     "",
     `Lead ID: ${leadId}`,
     `Name: ${payload.name}`,
@@ -37,12 +37,12 @@ async function sendLeadNotificationEmail(
 
   const resend = new Resend(apiKey);
   const from =
-    process.env.RESEND_FROM_EMAIL ?? "Target Media <onboarding@resend.dev>";
+    process.env.RESEND_FROM_EMAIL ?? "Vion Agency <onboarding@resend.dev>";
 
   const { error } = await resend.emails.send({
     from,
     to: LEAD_NOTIFICATION_TO,
-    subject: `New Target Media lead: ${payload.name}`,
+    subject: `New Vion Agency lead: ${payload.name}`,
     text: formatLeadEmailBody(payload, leadId),
     replyTo: payload.email,
   });

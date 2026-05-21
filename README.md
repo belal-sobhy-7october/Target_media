@@ -1,10 +1,10 @@
-# Target Media - Digital Marketing & Design Agency
+# Vion Agency - Digital Marketing & Design Agency
 
 A modern, bilingual (English/Arabic) marketing agency website built with Next.js 16, featuring a stunning dark-themed UI, internationalization support, and Supabase-powered contact form persistence.
 
 ## Project Overview
 
-Target Media is a professional digital marketing and design agency website that showcases services, company focus, and provides a contact form for lead generation. The site features a premium dark aesthetic with smooth animations, RTL support for Arabic, and a modern component-based architecture using shadcn/ui components.
+Vion Agency is a professional digital marketing and design agency website that showcases services, company focus, and provides a contact form for lead generation. The site features a premium dark aesthetic with smooth animations, RTL support for Arabic, and a modern component-based architecture using shadcn/ui components.
 
 ## Tech Stack
 
@@ -76,7 +76,7 @@ Target Media is a professional digital marketing and design agency website that 
 ## Project Structure
 
 ```
-Target Media/
+Vion Agency/
 ├── app/                          # Next.js App Router
 │   ├── [locale]/                # Internationalized routes
 │   │   ├── layout.tsx          # Locale-specific layout with RTL/LTR
@@ -517,7 +517,7 @@ function cn(...inputs: ClassValue[]): string;
   - `locale`: Current locale ('en' or 'ar')
   - `dir`: Text direction ('ltr' or 'rtl')
   - `dictionary`: Translation object
-- **Storage:** localStorage key `target-media-locale`
+- **Storage:** localStorage key `vion-agency-locale`
 - **Persistence:** Survives page refreshes
 - **Effects:** Updates document `lang`, `dir`, and CSS classes on locale change
 
